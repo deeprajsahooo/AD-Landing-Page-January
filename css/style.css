@@ -1,11 +1,11 @@
 :root {
   /* Picked to match your design */
-  --brand-red: #CB2036;
+  --brand-red: #DD001D;
   --brand-red-dark: #B72437;
   --brand-cream: #FFF5D6;
-  --brand-cream-2: #FFF9E6;
-  --brand-text: #141414;
-  --brand-border: #E7E1CE;
+  --brand-cream-2: #FFFBEF;
+  --brand-text: #212529;
+  --brand-border: #C9CEB3;
   --brand-gold: #F6D25C;
   --card-radius: 18px;
 }
@@ -69,9 +69,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 .hero-subtitle {
   margin-top: 8px;
-  font-weight: 700;
+  font-size: 27px;
+  font-weight: 600;
   letter-spacing: 1px;
-  color: #1b1b1b;
+  color: var(--brand-text)
 }
 
 .hero-btn {
@@ -213,7 +214,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* Title */
 .sec-title{
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.2;
 }
 
@@ -254,29 +255,26 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   gap: 14px;
   align-items: center;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  box-shadow:0 0 11px rgba(0,0,0,0.10);
 }
 
 .choose-ic {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
 }
 
 .choose-ic img {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
 .choose-ttl {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   line-height: 1.25;
 }
 
@@ -301,11 +299,30 @@ img { max-width: 100%; height: auto; display: block; }
   object-fit: cover;
 }
 
+
+/* WHY CHOOSE US – RIGHT IMAGE */
+.choose-right-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Image sizing based on design */
+.choose-right-img img{
+  width: 538px;          /* Figma width: 537.84px */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
 /* =========================
    PRICING
 ========================= */
 .pricing-section {
-  background: var(--brand-cream-2);
+ 
   padding: 70px 0;
 }
 
@@ -461,4 +478,23 @@ img { max-width: 100%; height: auto; display: block; }
   .float-badge img { width: 28px; height: 28px; }
 
   .product-name { font-size: 18px; }
+}
+
+/* Tablet */
+@media (max-width: 991.98px){
+  .choose-right-img img{
+    width: 420px;
+  }
+}
+/* WHY CHOOSE US – RIGHT IMAGE */
+/* Mobile */
+@media (max-width: 767.98px){
+  .choose-right-img{
+    margin-top: 32px;
+  }
+
+  .choose-right-img img{
+    width: 100%;
+    max-width: 340px;
+  }
 }
