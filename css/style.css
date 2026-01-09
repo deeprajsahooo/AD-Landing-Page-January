@@ -364,19 +364,20 @@ img {
   gap: 16px;
 }
 
-.plan-col-first{
+.plan-col-first {
   border-radius: 18px;
   overflow: hidden;
   background-color: #ffffff;
 }
 
-.plan-col-second{
+.plan-col-second {
   border-radius: 18px 0 0 18px;
   border: #C1000280 1px solid;
   overflow: hidden;
   background-color: #FFF1F3;
 }
-.plan-col-third{
+
+.plan-col-third {
   border-radius: 0px 18px 18px 0px;
   overflow: hidden;
   background-color: #FFF8F9;
@@ -536,11 +537,12 @@ img {
     padding: 11px 17px;
   }
 
-  .plan-col-second{
-  border-radius: 18px;
-}
-.plan-col-third{
-  border-radius: 18px;
-  margin-left: 0;
-}
+  .plan-col-second {
+    border-radius: 18px;
+  }
+
+  .plan-col-third {
+    border-radius: 18px;
+    margin-left: 0;
+  }
 }
