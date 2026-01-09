@@ -1,5 +1,5 @@
 :root {
-  /* Picked to match your design */
+
   --brand-red: #DD001D;
   --brand-red-dark: #B72437;
   --brand-cream: #FFF5D6;
@@ -278,28 +278,6 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.25;
 }
 
-.choose-photo-wrap {
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.choose-photo {
-  width: min(460px, 92%);
-  aspect-ratio: 1/1;
-  border-radius: 999px;
-  overflow: hidden;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-  background: #fff;
-}
-
-.choose-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
 /* WHY CHOOSE US – RIGHT IMAGE */
 .choose-right-img{
   display: flex;
@@ -310,7 +288,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Image sizing based on design */
 .choose-right-img img{
-  width: 538px;          /* Figma width: 537.84px */
+  width: 538px;         
   max-width: 100%;
   height: auto;
   display: block;
@@ -333,41 +311,39 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .plan-col {
-  background: #fff;
-  border: 1px solid var(--brand-border);
-  border-radius: var(--card-radius);
+  background: #FFF8F9;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.07);
 }
 
 .plan-top {
   padding: 18px 18px 16px;
-  background: #F7D765;
+  background: #FFD43E;
 }
 
 .plan-top-red {
-  background: var(--brand-red-dark);
+  background: var(--brand-red);
   color: #fff;
 }
 
 .plan-name {
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.4px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .plan-pill {
   display: inline-block;
   margin-top: 10px;
-  background: rgba(255,255,255,0.55);
-  padding: 6px 12px;
+  background: #FFF0D4;
+  padding: 3px 16px;
   border-radius: 999px;
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .plan-pill-dark {
-  background: rgba(0,0,0,0.20);
+  background: #9A0216;
   color: #fff;
 }
 
@@ -379,24 +355,24 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .plan-lbl {
-  font-size: 13px;
-  color: #6e6e6e;
+  font-size: 16px;
+  color:#5A5B5B;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .plan-val {
-  font-size: 15px;
-  color: #1a1a1a;
+  font-size: 18px;
+  color: var(--brand-text);
+  font-weight: 500!important;
   line-height: 1.2;
 }
 
 .plan-note {
   padding: 16px 18px 18px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-  font-size: 12.5px;
-  color: #6b6b6b;
+  font-size: 14px;
+  color: #5A5B5B;
   line-height: 1.45;
-  background: #FAFAFA;
 }
 
 /* =========================
@@ -479,14 +455,14 @@ img { max-width: 100%; height: auto; display: block; }
 
   .product-name { font-size: 18px; }
 }
-
+/* WHY CHOOSE US – RIGHT IMAGE */
 /* Tablet */
 @media (max-width: 991.98px){
   .choose-right-img img{
     width: 420px;
   }
 }
-/* WHY CHOOSE US – RIGHT IMAGE */
+
 /* Mobile */
 @media (max-width: 767.98px){
   .choose-right-img{
