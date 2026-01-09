@@ -384,23 +384,17 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .product-card {
-  background: #fff;
-  border: 1px solid var(--brand-border);
+  background: #ffffff;
   border-radius: 16px;
-  padding: 18px 18px;
+  padding: 0 18px;
   display: flex;
   align-items: center;
   gap: 14px;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
-  height: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-
 .product-ic {
   width: 86px;
   height: 56px;
-  border-radius: 14px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
   display: grid;
   place-items: center;
   flex: 0 0 auto;
@@ -413,8 +407,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .product-name {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /* Smooth hover like your style */
