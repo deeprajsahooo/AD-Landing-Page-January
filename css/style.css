@@ -21,23 +21,27 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 
 /* =========================
-   HERO
+   HERO SECTION STYLE
 ========================= */
 .hero-section {
   background: var(--brand-cream);
   padding: 72px 0 60px;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("../images/hero-bg.png") center bottom / cover no-repeat;
+  background: url("images/Rectangle 2.png") center bottom / cover no-repeat;
   opacity: 0.35;
   pointer-events: none;
 }
 
-.hero-left { padding-right: 8px; }
+/* Adjusts left, middle, and right columns */
+.hero-left, .hero-right {
+  padding-right: 8px;
+}
 
 .hero-title {
   display: flex;
@@ -72,23 +76,41 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 27px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--brand-text)
+  color: var(--brand-text);
 }
 
 .hero-btn {
   margin-top: 24px;
-  border: 2px solid var(--brand-red);
+  border: 1px solid var(--brand-red);
   color: var(--brand-red);
   background: transparent;
-  border-radius: 999px;
-  padding: 10px 18px;
+  border-radius: 100px;
+  padding: 16px 24px;
   font-weight: 600;
+  font-size: 18px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  justify-content: center; /* Ensure text and icon are aligned */
 }
 
+.hero-btn:hover {
+  background: var(--brand-red);
+  color: #fff;
+}
+
+.hero-btn img {
+  width: 24px; /* Ensure image size matches the button */
+  height: 24px;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.hero-btn:hover img {
+  transform: translateX(5px); /* Slight move to the right when hovering */
+}
+
+/* Optional hover effect for the button */
 .hero-btn:hover {
   background: var(--brand-red);
   color: #fff;
@@ -111,11 +133,6 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--brand-red);
 }
 
-.hero-right {
-  position: relative;
-  min-height: 420px;
-}
-
 .phone-mock-wrap {
   position: absolute;
   left: -140px;
@@ -124,8 +141,9 @@ img { max-width: 100%; height: auto; display: block; }
   z-index: 1;
 }
 
-.phone-mock {
-  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.18));
+/* Apply tilt to middle image */
+.hero-img-tilted {
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.18));
 }
 
 /* Lead form card */
@@ -202,6 +220,35 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .btn-secondary-action:hover { opacity: 1; color: #fff; }
+
+.overlay-img {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(79%); /* Centers horizontally */
+  width: 100%; /* Ensures it covers the full width */
+  height: 100%; /* Ensures it covers the height of the parent */
+  background-position: bottom center;
+  background-size: cover; /* Ensures the image covers the area without stretching */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  z-index: 2;
+}
+
+/* Make images and layout responsive */
+@media (max-width: 991px) {
+  .hero-left, .hero-right {
+    padding-right: 0;
+  }
+
+  .phone-mock-wrap {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .hero-img-tilted {
+    transform: none;
+  }
+}
 
 /* =========================
    SECTION HEAD
