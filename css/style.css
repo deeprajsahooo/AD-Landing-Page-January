@@ -349,7 +349,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .plan-row {
   padding: 14px 18px;
-  border-top: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid #EBEBEB;
   display: grid;
   gap: 6px;
 }
