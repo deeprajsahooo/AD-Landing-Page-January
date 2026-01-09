@@ -364,10 +364,23 @@ img {
   gap: 16px;
 }
 
-.plan-col {
-  background: #FFF8F9;
+.plan-col-first{
   border-radius: 18px;
   overflow: hidden;
+  background-color: #ffffff;
+}
+
+.plan-col-second{
+  border-radius: 18px 0 0 18px;
+  border: #C1000280 1px solid;
+  overflow: hidden;
+  background-color: #FFF1F3;
+}
+.plan-col-third{
+  border-radius: 0px 18px 18px 0px;
+  overflow: hidden;
+  background-color: #FFF8F9;
+  margin-left: -16px;
 }
 
 .plan-top {
@@ -522,4 +535,12 @@ img {
     font-size: 14px;
     padding: 11px 17px;
   }
+
+  .plan-col-second{
+  border-radius: 18px;
+}
+.plan-col-third{
+  border-radius: 18px;
+  margin-left: 0;
+}
 }
