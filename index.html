@@ -44,7 +44,7 @@
           <!-- Middle Column (Image - tilted) -->
           <div class="col-lg-4 order-1 order-lg-2 text-center">
             <div class="hero-img-wrap hero-middle">
-                <img src="images/Group heroimg.png" class="img-fluid hero-image-phone" alt="App mock (placeholder)">
+              <img src="images/Group heroimg.png" class="img-fluid hero-image-phone" alt="App mock (placeholder)">
             </div>
           </div>
 
@@ -73,11 +73,11 @@
                 <div class="mb-3">
                   <div class="input-group">
                     <!-- Mobile Icon -->
-                    <span class="input-group-text lead-prefix">
+                    <span class="input-group-text lead-prefix" style="font-size: 14px;">
                       <i class="fas fa-mobile-alt"></i>&nbsp;
                       +91
                     </span>
-                    <input type="tel" class="form-control lead-input" placeholder="Enter Mobile Number">
+                    <input type="tel" class="form-control lead-input"  style="font-size: 14px;" placeholder="Enter Mobile Number">
                   </div>
                 </div>
 
@@ -475,6 +475,18 @@
     </section>
 
   </main>
+
+<!-- Bootstrap JavaScript Libraries -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Bootstrap Animation   -->
+  <script>
+    AOS.init({
+      duration: 800,     // animation duration in ms
+      easing: 'ease-out', // smooth easing
+      once: true,         // animate only once
+    });
+  </script>
 </body>
 
 </html>

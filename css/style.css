@@ -6,6 +6,8 @@
   --brand-text: #212529;
   --brand-border: #C9CEB3;
   --card-radius: 18px;
+  --letter-spacing: 0.005; 
+  --line-height: 1.6;  
 }
 
 body {
@@ -24,9 +26,7 @@ img {
   display: block;
 }
 
-/* =========================
-   HERO SECTION STYLE
-========================= */
+/* START HERO SECTION STYLE */
 .hero-section {
   background: #FFF0D4;
   padding: 40px 0 50px;
@@ -82,7 +82,6 @@ img {
   margin-top: 24px;
   font-size: 27px;
   font-weight: 600;
-  letter-spacing: 1px;
   color: var(--brand-text);
 }
 
@@ -96,7 +95,7 @@ img {
   border-radius: 100px;
   padding: 16px 24px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -136,17 +135,16 @@ img {
 
 .lead-title {
   margin: 0;
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 500;
   color: var(--brand-red);
-  line-height: 1.05;
 }
 
 .lead-sub {
   margin: 10px 0 14px;
   color: #5A5B5B;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .lead-prefix {
@@ -161,18 +159,19 @@ img {
 .lead-input {
   border: 1px solid #E6E6E6;
   border-radius: 0 12px 12px 0;
-  padding: 12px 12px;
+  padding: 10px 12px;
 }
 
 .btn-cta {
   background-color: var(--brand-red);
   color: #fff;
   border-radius: 100px;
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-weight: 600;
+  font-size: 14px;
   border: none;
   width: auto;
-  max-width: 80%;
+  max-width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -194,15 +193,15 @@ img {
 
 
 .lead-legal {
-  font-size: 12px;
+  font-size: 11px;
   color: #5A5B5B;
-  line-height: 1.4;
+ 
 }
 
 .lead-check {
-  font-size: 12px;
+  font-size: 11px;
   color: #5A5B5B;
-  line-height: 1.35;
+  
 }
 
 /* Make checked checkbox red instead of blue */
@@ -229,7 +228,7 @@ img {
   padding: 04px 08px;
   font-weight: 600;
   border: none;
-  max-width: 70%;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -262,10 +261,6 @@ img {
   }
 }
 
-/* =========================
-   SECTION HEAD
-========================= */
-/* Heading spacing */
 .sec-head {
   margin-bottom: 22px;
 }
@@ -274,7 +269,7 @@ img {
 .sec-title {
   font-size: 42px;
   font-weight: 300;
-  line-height: 1.2;
+
 }
 
 .sec-icon-img {
@@ -292,9 +287,9 @@ img {
   object-fit: contain;
 }
 
-/* =========================
-   WHY CHOOSE
-========================= */
+/* END HERO SECTION STYLE */
+
+/* START WHY CHOOSE US*/
 .why-section {
   padding: 40px 0;
 }
@@ -333,7 +328,7 @@ img {
 .choose-ttl {
   font-size: 24px;
   font-weight: 400;
-  line-height: 1.25;
+
 }
 
 /* WHY CHOOSE US – RIGHT IMAGE */
@@ -354,9 +349,9 @@ img {
 
 
 
-/* =========================
+/* 
    PRICING
-========================= */
+ */
 .pricing-section {
   background: var(--brand-cream-2);
   padding: 30px 0;
@@ -400,7 +395,6 @@ img {
 
 .plan-name {
   font-weight: 600;
-  letter-spacing: 0.4px;
   font-size: 20px;
 }
 
@@ -430,26 +424,27 @@ img {
   font-size: 16px;
   color: #5A5B5B;
   font-weight: 400;
-  line-height: 1.2;
+ 
 }
 
 .plan-val {
   font-size: 18px;
   color: var(--brand-text);
   font-weight: 500 !important;
-  line-height: 1.2;
+
 }
 
 .plan-note {
   padding: 16px 18px 18px;
   font-size: 14px;
   color: #5A5B5B;
-  line-height: 1.45;
+  
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+/* START WHY CHOOSE US*/
+
+/* START PRODUCTS */
+
 .products-section {
   background: var(--brand-cream-2);
   padding: 40px 0;
@@ -466,16 +461,16 @@ img {
 }
 
 .product-ic {
-  width: 86px;
-  height: 56px;
+  width: 134px; /* Adjust width as per the image size */
+  height: 118px; /* Adjust height based on the image dimensions */
   display: grid;
   place-items: center;
   flex: 0 0 auto;
 }
 
 .product-ic img {
-  width: 56px;
-  height: 40px;
+  width: 100%; /* Ensure the image fills its container */
+  height: auto;
   object-fit: contain;
 }
 
@@ -492,6 +487,11 @@ img {
   transition: all 0.25s ease;
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.10);
 }
+
+/* END PRODUCTS */
+
+
+/* START MEDIA QUERIES */
 
 @media (max-width: 991.98px) {
   .hero-subtitle {
@@ -550,3 +550,4 @@ img {
     margin-left: 0;
   }
 }
+/* END MEDIA QUERIES */
