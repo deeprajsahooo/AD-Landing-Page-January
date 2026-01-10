@@ -35,7 +35,7 @@
     <!-- =========================
    HERO
 ========================= -->
-    <section class="hero-section position-relative overflow-hidden">
+    <section class="hero-section position-relative overflow-hidden" data-aos="fade-up">
       <!-- background image placeholder -->
       <div aria-hidden="true"></div>
 
@@ -117,8 +117,8 @@
     <!-- =========================
          PLANS & PRICING
     ========================== -->
-    <section class="pricing-section" id="pricing">
-      <div class="container">
+    <section class="pricing-section" id="pricing" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" >
 
         <div class="sec-head d-flex align-items-center gap-3 mb-4">
           <span class="sec-icon-img">
@@ -323,7 +323,7 @@
     <!-- =========================
          WHY CHOOSE US
     ========================== -->
-    <section class="why-section">
+    <section class="why-section" data-aos="fade-up" data-aos-delay="150">
       <div class="container">
         <div class="row align-items-center gy-4">
           <!-- Left Column (content) -->
@@ -402,7 +402,7 @@
     <!-- =========================
          PRODUCTS WE OFFERS
     ========================== -->
-    <section class="products-section" id="products">
+    <section class="products-section" id="products" data-aos="fade-up" data-aos-delay="200">
       <div class="container">
         <div class="sec-head d-flex align-items-center gap-3 mb-4">
           <span class="sec-icon-img">
@@ -480,13 +480,14 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <!-- Bootstrap Animation   -->
-  <script>
-    AOS.init({
-      duration: 800,     // animation duration in ms
-      easing: 'ease-out', // smooth easing
-      once: true,         // animate only once
-    });
-  </script>
+<script>
+  AOS.init({
+    duration: 700,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 80
+  });
+</script>
 </body>
 
 </html>

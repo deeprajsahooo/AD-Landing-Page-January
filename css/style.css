@@ -493,7 +493,7 @@ img {
 
 /* START MEDIA QUERIES */
 
-@media (max-width: 991.98px) {
+@media (max-width: 767px) {
   .hero-subtitle {
     font-size: 22px;
   }
@@ -551,3 +551,119 @@ img {
   }
 }
 /* END MEDIA QUERIES */
+
+/* =====================================================
+   GLOBAL PAGE LOAD – SOFT FADE IN
+===================================================== */
+body {
+  opacity: 0;
+  animation: pageFade 0.6s ease-out forwards;
+}
+
+@keyframes pageFade {
+  to {
+    opacity: 1;
+  }
+}
+
+/* =====================================================
+   AOS PERFORMANCE OPTIMIZATION
+===================================================== */
+[data-aos] {
+  will-change: transform, opacity;
+}
+
+/* =====================================================
+   BUTTON & CTA MICRO INTERACTIONS
+===================================================== */
+.btn,
+.hero-btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover,
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================================
+   CARD HOVER EFFECTS (PLANS, PRODUCTS, FORMS)
+===================================================== */
+.plan-col-first,
+.plan-col-second,
+.plan-col-third,
+.product-card,
+.lead-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-col-first:hover,
+.plan-col-second:hover,
+.plan-col-third:hover,
+.product-card:hover,
+.lead-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================================
+   HERO IMAGE – SUBTLE FLOATING EFFECT
+===================================================== */
+.hero-image-phone {
+  animation: floatScale 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floatScale {
+  0%, 100% {
+    transform: translateY(0) scale(1.4);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.6);
+  }
+}
+
+
+@media (max-width: 991px) {
+
+  .hero-image-phone {
+    animation: floatScaleMobile 4s ease-in-out infinite;
+  }
+
+  @keyframes floatScaleMobile {
+    0%, 100% {
+      transform: translateY(0) scale(1.1);
+    }
+    50% {
+      transform: translateY(-4px) scale(1.2);
+    }
+  }
+
+}
+
+
+.hero-zeroimg {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+/* =====================================================
+   OPTIONAL: SMOOTH TRANSITION FOR LINKS
+===================================================== */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.9;
+}
