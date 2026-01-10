@@ -28,8 +28,8 @@ img {
    HERO SECTION STYLE
 ========================= */
 .hero-section {
-  background: var(--brand-cream);
-  padding: 20px 0 50px;
+  background: #FFF0D4;
+  padding: 40px 0 50px;
   position: relative;
   overflow: hidden;
 }
@@ -48,13 +48,34 @@ img {
     width: 80%;
   }
 }
+.hero-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: visible; /* Allow the image to overflow the container */
+}
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: url("images/Rectangle 2.png") center bottom / cover no-repeat;
-  opacity: 0.35;
-  pointer-events: none;
+.hero-image-phone {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  /* On mobile, the image should stay inside the container */
+  .hero-image-phone {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensures the image fits without stretching */
+  }
+}
+
+@media (min-width: 768px) {
+  /* On desktop, scale the image to 1.5 times and allow it to overlap the adjacent columns */
+  .hero-image-phone {
+    transform: scale(1.4); /* Scale the image to 1.5x */
+    position: relative;
+    z-index: 1; /* Ensure it appears above the adjacent columns */
+  }
 }
 
 .hero-subtitle {
@@ -101,19 +122,6 @@ img {
   .hero-btn {
     padding: 12px 10px;
   }
-}
-
-.phone-mock-wrap {
-  position: absolute;
-  left: -140px;
-  top: -10px;
-  width: 360px;
-  z-index: 1;
-}
-
-/* Apply tilt to middle image */
-.hero-img-tilted {
-  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.18));
 }
 
 /* Lead form card */
@@ -251,10 +259,6 @@ img {
     position: relative;
     left: 0;
     top: 0;
-  }
-
-  .hero-img-tilted {
-    transform: none;
   }
 }
 
