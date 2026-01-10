@@ -6,8 +6,8 @@
   --brand-text: #212529;
   --brand-border: #C9CEB3;
   --card-radius: 18px;
-  --letter-spacing: 0.005; 
-  --line-height: 1.6;  
+  --letter-spacing: 0.005;
+  --line-height: 1.6;
 }
 
 body {
@@ -27,11 +27,45 @@ img {
 }
 
 /* START HERO SECTION STYLE */
+
 .hero-section {
-  background: #FFF0D4;
+  background-color: #FFF0D4;
   padding: 40px 0 50px;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  width: 200%;
+  height: 100%;
+  background-image: url('/images/Group 54.png');
+  background-repeat: repeat-x;
+  background-size: auto 20%;
+  background-position: bottom center;
+  animation: bg-move-ltr 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes bg-move-ltr {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-section::before {
+    background-size: auto 10%;
+
+  }
 }
 
 .hero-zeroimg {
@@ -48,10 +82,12 @@ img {
     width: 70%;
   }
 }
+
 .hero-img-wrap {
   position: relative;
   width: 100%;
-  overflow: visible; /* Allow the image to overflow the container */
+  overflow: visible;
+  /* Allow the image to overflow the container */
 }
 
 .hero-image-phone {
@@ -61,20 +97,25 @@ img {
 }
 
 @media (max-width: 767px) {
+
   /* On mobile, the image should stay inside the container */
   .hero-image-phone {
     width: 100%;
     max-width: 100%;
-    object-fit: contain; /* Ensures the image fits without stretching */
+    object-fit: contain;
+    /* Ensures the image fits without stretching */
   }
 }
 
 @media (min-width: 768px) {
+
   /* On desktop, scale the image to 1.5 times and allow it to overlap the adjacent columns */
   .hero-image-phone {
-    transform: scale(1.4); /* Scale the image to 1.5x */
+    transform: scale(1.4);
+    /* Scale the image to 1.5x */
     position: relative;
-    z-index: 1; /* Ensure it appears above the adjacent columns */
+    z-index: 1;
+    /* Ensure it appears above the adjacent columns */
   }
 }
 
@@ -195,13 +236,13 @@ img {
 .lead-legal {
   font-size: 11px;
   color: #5A5B5B;
- 
+
 }
 
 .lead-check {
   font-size: 11px;
   color: #5A5B5B;
-  
+
 }
 
 /* Make checked checkbox red instead of blue */
@@ -424,7 +465,7 @@ img {
   font-size: 16px;
   color: #5A5B5B;
   font-weight: 400;
- 
+
 }
 
 .plan-val {
@@ -438,7 +479,7 @@ img {
   padding: 16px 18px 18px;
   font-size: 14px;
   color: #5A5B5B;
-  
+
 }
 
 /* START WHY CHOOSE US*/
@@ -461,15 +502,18 @@ img {
 }
 
 .product-ic {
-  width: 134px; /* Adjust width as per the image size */
-  height: 118px; /* Adjust height based on the image dimensions */
+  width: 134px;
+  /* Adjust width as per the image size */
+  height: 118px;
+  /* Adjust height based on the image dimensions */
   display: grid;
   place-items: center;
   flex: 0 0 auto;
 }
 
 .product-ic img {
-  width: 100%; /* Ensure the image fills its container */
+  width: 100%;
+  /* Ensure the image fills its container */
   height: auto;
   object-fit: contain;
 }
@@ -550,6 +594,7 @@ img {
     margin-left: 0;
   }
 }
+
 /* END MEDIA QUERIES */
 
 /* =====================================================
@@ -616,9 +661,12 @@ body {
 }
 
 @keyframes floatScale {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1.4);
   }
+
   50% {
     transform: translateY(-6px) scale(1.6);
   }
@@ -632,9 +680,12 @@ body {
   }
 
   @keyframes floatScaleMobile {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0) scale(1.1);
     }
+
     50% {
       transform: translateY(-4px) scale(1.2);
     }
@@ -648,9 +699,12 @@ body {
 }
 
 @keyframes floatY {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-6px);
   }
