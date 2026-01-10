@@ -368,8 +368,7 @@
                 </div>
                 <div class="choose-txt">
                   <div class="choose-ttl"><span class="text-brand" style="font-weight: 600;">Easy access</span> to IPOs,
-                    mutual funds,<br>and
-                    research ideas</div>
+                    mutual funds,and research ideas</div>
                 </div>
               </div>
 
@@ -480,7 +479,15 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <!-- Bootstrap Animation   -->
-<script>
+  <script>
+    AOS.init({
+      duration: 800,     // animation duration in ms
+      easing: 'ease-out', // smooth easing
+      once: true,         // animate only once
+    });
+  </script>
+
+  <script>
   AOS.init({
     duration: 700,
     easing: 'ease-out-cubic',
