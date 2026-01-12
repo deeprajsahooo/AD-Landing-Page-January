@@ -136,7 +136,9 @@
             <div class="plan-top">
               <div class="plan-name">STANDARD PLAN</div>
               <div class="plan-pill">Delivery: 0.10% / Intraday: 0.01%</div>
+               <span class="plan-toggle">+</span>
             </div>
+            <div class="plan-body">
 
             <div class="plan-row">
               <div class="plan-lbl">A/C Opening Fee</div>
@@ -193,6 +195,7 @@
                 payable per share/contract, you will be charged minimum rate of brokerage per share instead of the
                 percentage.
               </div>
+              </div>
             </div>
           </div>
 
@@ -201,7 +204,10 @@
             <div class="plan-top plan-top-red">
               <div class="plan-name">ABCD299 (INR 299 + GST)</div>
               <div class="plan-pill plan-pill-dark">Intraday at Rs.10 per executed order</div>
+              <span class="plan-toggle">+</span>
             </div>
+
+            <div class="plan-body">
 
             <div class="plan-row">
               <div class="plan-lbl">A/C Opening Fee</div>
@@ -255,13 +261,16 @@
                 equity delivery pricing for every 5 lakhs turnover, please renew the 299 plan.</div>
             </div>
           </div>
+          </div>
 
           <!-- 999 -->
           <div class="plan-col-third plan-999 order-3 order-lg-3">
             <div class="plan-top plan-top">
               <div class="plan-name">ABCD999 (INR 999 + GST)</div>
               <div class="plan-pill">Intraday - Free</div>
+              <span class="plan-toggle">+</span>
             </div>
+             <div class="plan-body">
 
             <div class="plan-row">
               <div class="plan-lbl">A/C Opening Fee</div>
@@ -313,6 +322,7 @@
               <div>Post limit exhaustion of 10 lakhs turnover, 0.10% will be charged for delivery. To continue availing
                 of equity delivery pricing for every 10 lakhs turnover, please renew the 999 plan.</div>
             </div>
+          </div>
           </div>
 
         </div>
@@ -489,6 +499,25 @@
     easing: 'ease-out-cubic',
     once: true,
     offset: 80
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const isMobile = window.matchMedia('(max-width: 991.98px)').matches;
+    if (!isMobile) return;
+
+    document.querySelectorAll('.plan-top').forEach(top => {
+      top.addEventListener('click', () => {
+        const parent = top.closest('.plan-col-first, .plan-col-second, .plan-col-third');
+        if (!parent) return;
+
+        parent.classList.toggle('active');
+
+        const toggle = top.querySelector('.plan-toggle');
+        if (toggle) toggle.textContent = parent.classList.contains('active') ? '−' : '+';
+      });
+    });
   });
 </script>
 </body>
