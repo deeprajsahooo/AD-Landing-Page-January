@@ -64,7 +64,7 @@
           </div>
 
           <!-- Right Column (lead form) -->
-          <div class="col-lg-4 order-3 order-lg-3">
+          <div class="col-lg-4 order-3 order-lg-3 lead-form-col">
             <div class="hero-right">
               <div class="lead-card" id="leadForm">
                 <h2 class="lead-title">Start Building<br>Your Wealth Today.</h2>
@@ -524,6 +524,32 @@
       });
     });
   </script>
+
+  <!-- Mobile form poupup  -->
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ctaBtn = document.querySelector('.hero-btn');
+    const leadCol = document.querySelector('.lead-form-col');
+
+    if (!ctaBtn || !leadCol) return;
+
+    ctaBtn.addEventListener('click', (e) => {
+      const isMobile = window.matchMedia('(max-width: 991.98px)').matches;
+      if (!isMobile) return;
+
+      e.preventDefault();
+
+      leadCol.classList.add('is-visible');
+
+      // Smooth scroll to form
+      setTimeout(() => {
+        leadCol.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    });
+  });
+</script>
+
 </body>
 
 </html>

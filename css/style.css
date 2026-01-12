@@ -134,6 +134,7 @@ img {
   color: var(--brand-red);
   background: transparent;
   border-radius: 100px;
+  padding: 12px 14px!important;
   font-weight: 600;
   font-size: 16px;
   display: inline-flex;
@@ -145,21 +146,18 @@ img {
 
 .hero-btn img {
   width: 24px;
-  /* Ensure image size matches the button */
   height: 24px;
   transition: transform 0.3s ease;
-  /* Smooth transition on hover */
 }
 
 .hero-btn:hover img {
   transform: translateX(5px);
-  /* Slight move to the right when hovering */
 }
 
 
 @media (max-width: 768px) {
   .hero-btn {
-    padding: 12px 10px;
+    padding: 12px 10px!important;
   }
 }
 
@@ -578,9 +576,8 @@ img {
   .hero-btn {
     display: inline-flex;
     justify-content: center;
-    /* Center the button */
     font-size: 14px;
-    padding: 11px 17px;
+
   }
 
   .plan-col-second {
@@ -799,5 +796,29 @@ a:hover {
   .plan-col-third.active .plan-toggle {
     background: transparent;
     color: #fff;
+  }
+}
+
+/* Hide lead form on mobile */
+@media (max-width: 991.98px) {
+  .lead-form-col {
+    display: none;
+  }
+
+  .lead-form-col.is-visible {
+    display: block;
+    animation: fadeSlideUp 0.4s ease-out;
+  }
+}
+
+/* Subtle professional animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
