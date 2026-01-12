@@ -383,7 +383,7 @@ img {
 /* Image sizing based on design */
 .choose-right-img img {
   width: 538px;
-  max-width: 100%;
+  max-width: 85%;
   height: auto;
   display: block;
 }
@@ -411,17 +411,16 @@ img {
 }
 
 .plan-col-second {
-  border-radius: 18px 0 0 18px;
+  border-radius: 18px;
   border: #C1000280 1px solid;
   overflow: hidden;
   background-color: #FFF1F3;
 }
 
 .plan-col-third {
-  border-radius: 0px 18px 18px 0px;
+  border-radius: 18px;
   overflow: hidden;
-  background-color: #FFF8F9;
-  margin-left: -16px;
+  background-color: #ffffff;
 }
 
 .plan-top {
@@ -593,6 +592,30 @@ img {
     border-radius: 18px;
     margin-left: 0;
   }
+
+  /* Image sizing based on design */
+.choose-right-img img {
+  width: 538px;
+  max-width: 90%;
+  height: auto;
+}
+.product-ic {
+  width: 134px;
+  /* Adjust width as per the image size */
+  height: 90px;
+  /* Adjust height based on the image dimensions */
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.product-ic img {
+  width: 100%;
+  /* Ensure the image fills its container */
+  height: 90px;
+  object-fit: contain;
+}
+
 }
 
 /* END MEDIA QUERIES */
