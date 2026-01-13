@@ -380,7 +380,7 @@ img {
 /* Image sizing based on design */
 .choose-right-img img {
   width: 538px;
-  max-width: 85%;
+  max-width: 80%;
   height: auto;
   display: block;
 }
