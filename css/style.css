@@ -89,6 +89,74 @@ img {
   overflow: visible;
   /* Allow the image to overflow the container */
 }
+ /* 299 HIGHLIGHT  */
+.hero-plan-line{
+  margin-top:16px;
+  text-align:left;             
+}
+
+.hero-plan-line .plan-text{
+  display:block;
+  font-size:24px;
+  font-weight:700;
+  color:var(--brand-text);
+}
+
+.hero-plan-line .price-highlight{
+  display:block;                /* Separate line */
+  font-size: 140px;               /* Bigger emphasis */
+  font-weight:700;
+  color:var(--brand-red);
+  line-height: 0.8;
+}
+
+/* Mobile alignment */
+@media (max-width: 991.98px){
+  .hero-plan-line{
+    text-align:center;
+  }
+
+  .hero-plan-line .plan-text{
+    font-size:18px;
+  }
+
+  .hero-plan-line .price-highlight{
+    font-size:90px;
+  }
+}
+
+/* ===== Animation Utilities ===== */
+
+/* Fade + slight slide up */
+.animate-fade-up{
+  animation: fadeUp 0.6s ease-out both;
+}
+
+/* Gentle pulse for highlight text */
+.animate-price-pulse{
+  animation: pricePulse 2.5s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes pricePulse{
+  0%,100%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.04);
+  }
+}
 
 .hero-image-phone {
   width: 100%;
@@ -121,7 +189,7 @@ img {
 }
 
 .hero-subtitle {
-  margin-top: 24px;
+  margin-top: 14px;
   font-size: 27px;
   font-weight: 600;
   color: var(--brand-text);
@@ -130,12 +198,12 @@ img {
 .hero-btn,
 .hero-btn:hover,
 .hero-btn:focus {
-  margin-top: 24px;
+  margin-top: 10px;
   border: 1px solid var(--brand-red);
   color: var(--brand-red);
   background: transparent;
   border-radius: 100px;
-  padding: 12px 14px !important;
+  padding: 12px 14px  !important;
   font-weight: 600;
   font-size: 16px;
   display: inline-flex;
@@ -212,15 +280,14 @@ img {
   font-size: 14px;
   border: none;
   width: auto;
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;
+  margin: 0 auto;   
 }
 
 @media (max-width: 768px) {
   .btn-cta {
-    width: 90%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -269,15 +336,15 @@ img {
   padding: 04px 08px;
   font-weight: 600;
   border: none;
-  max-width: 80%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (max-width: 768px) {
   .btn-secondary-action {
-    width: 80%;
-    max-width: 80%;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
