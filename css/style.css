@@ -30,7 +30,7 @@ img {
 
 .hero-section {
   background-color: #FFF0D4;
-  padding: 40px 0 50px;
+  padding: 30px 0 30px;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -71,7 +71,7 @@ img {
 .hero-zeroimg {
   width: 374px;
   /* desktop width */
-  max-width: 92%;
+  max-width: 80%;
   height: auto;
   display: block;
 }
@@ -79,7 +79,7 @@ img {
 /* Mobile: scale to 80% */
 @media (max-width: 768px) {
   .hero-zeroimg {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -100,7 +100,8 @@ img {
 
   /* On mobile, the image should stay inside the container */
   .hero-image-phone {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto; 
     max-width: 100%;
     object-fit: contain;
     /* Ensures the image fits without stretching */
@@ -112,7 +113,7 @@ img {
   /* On desktop, scale the image to 1.5 times and allow it to overlap the adjacent columns */
   .hero-image-phone {
     transform: scale(1.4);
-    /* Scale the image to 1.5x */
+
     position: relative;
     z-index: 1;
     /* Ensure it appears above the adjacent columns */
@@ -167,13 +168,13 @@ img {
   z-index: 2;
   background: #fff;
   border-radius: var(--card-radius);
-  padding: 36px 36px 20px 36px;
+  padding: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .lead-title {
   margin: 0;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--brand-red);
 }
@@ -684,11 +685,11 @@ body {
 
   0%,
   100% {
-    transform: translateY(0) scale(1.4);
+    transform: translateY(0) scale(1.15);
   }
 
   50% {
-    transform: translateY(-6px) scale(1.6);
+    transform: translateY(-6px) scale(1.25);
   }
 }
 
